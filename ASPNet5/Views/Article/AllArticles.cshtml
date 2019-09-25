@@ -1,0 +1,16 @@
+﻿@model List<ASPNet5.Models.ArticleEx>
+@{
+    ViewBag.Title = "AllArticles";
+}
+
+<h2>Najnovije novosti</h2>
+@foreach (var m in Model) {
+
+    <h3>@m.Title</h3>
+    <h4>Autor: @m.Author</h4>
+    <h4>Datum objave @m.PublishTime</h4>
+    <img src="@m.ImageURL" width="150" height="150" />
+    <p>@m.Text</p>
+    <hr />
+    <br />
+}
